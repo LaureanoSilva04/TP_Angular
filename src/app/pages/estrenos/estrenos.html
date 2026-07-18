@@ -1,0 +1,7 @@
+<div class="contenedor-pelicula">
+    @for (pelicula of listaPeliculas; track pelicula.id) {
+        @if (isEstrenoDelMes(pelicula.fecha_estreno)) {
+            <app-tarjeta-pelicula [peli]="pelicula"></app-tarjeta-pelicula>
+        }
+    }
+</div>
