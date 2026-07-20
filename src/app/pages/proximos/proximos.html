@@ -1,1 +1,5 @@
-<p>proximos works!</p>
+<div class="grilla-peliculas">
+    @for (pelicula of listaPeliculas$ | async; track pelicula.id) {
+        <app-tarjeta-pelicula [peli]="pelicula"></app-tarjeta-pelicula>
+    }
+</div>

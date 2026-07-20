@@ -9,4 +9,8 @@ import { Pelicula } from '../../interfaces/pelicula';
 })
 export class TarjetaPelicula {
   @Input() peli!: Pelicula;
+
+  comprarTicket() {
+    alert(`¡Has reservado un ticket para la película: ${this.peli.titulo}!`);
+  }
 }

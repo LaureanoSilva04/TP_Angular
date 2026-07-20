@@ -1,9 +1,15 @@
-<div class="tarjeta-provisional">
-  <h2>{{ peli.titulo }}</h2>
-  <p><strong>Fecha de Estreno:</strong> {{ peli.fecha_estreno }}</p>
-  <p><strong>Director:</strong> {{ peli.director }}</p>
-  <p><strong>Sinopsis:</strong> {{ peli.sinopsis }}</p>
-  <p><strong>Calificación:</strong> {{ peli.calificacion }}/10</p>
+<div class="tarjeta-pelicula">
+  <div class="tarjeta-header">
+    <h2 class="titulo">{{ peli.titulo }}</h2>
+    <span class="calificacion"> {{ peli.calificacion }}/10</span>
+  </div>
   
-  <button class="btn-comprar">Comprar Ticket</button>
+  <div class="tarjeta-cuerpo">
+    <p class="meta-info"><strong>Estreno:</strong> {{ peli.fecha_estreno }} | <strong>Director:</strong> {{ peli.director }}</p>
+    <p class="sinopsis">{{ peli.sinopsis }}</p>
+  </div>
+  
+  <div class="tarjeta-footer">
+    <button class="btn-comprar" (click)="comprarTicket()"> Comprar Ticket</button>
+  </div>
 </div>

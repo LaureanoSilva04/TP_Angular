@@ -1,0 +1,46 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.main-header {
+  background-color: #e50914; 
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 101; 
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.main-content {
+  flex: 1; 
+  padding-bottom: 3rem;
+}
+
+.main-footer {
+  background-color: #0a0a0a;
+  color: #888;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid #222;
+  margin-top: auto; 
+}
+
+.main-footer p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.footer-creditos {
+  color: #bbb;
+  font-weight: 600;
+}

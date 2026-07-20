@@ -1,1 +1,69 @@
-<p>admin works!</p>
+<div class="contenedor-admin">
+  <div class="panel-formulario">
+    <h2> Agregar Nueva Película</h2>
+    
+    <form [formGroup]="formularioPelicula" (ngSubmit)="guardarPelicula()" class="formulario">
+      
+      <div class="campo">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" formControlName="titulo" class="input-control">
+        @if (formularioPelicula.get('titulo')?.invalid && formularioPelicula.get('titulo')?.touched) {
+          <span class="error">El título es obligatorio.</span>
+        }
+      </div>
+
+      <div class="campo-doble">
+        <div class="campo">
+          <label for="fecha_estreno">Estreno:</label>
+          <input type="date" id="fecha_estreno" formControlName="fecha_estreno" class="input-control">
+          @if (formularioPelicula.get('fecha_estreno')?.invalid && formularioPelicula.get('fecha_estreno')?.touched) {
+            <span class="error">Requerido.</span>
+          }
+        </div>
+
+        <div class="campo">
+          <label for="calificacion">Calificación (0 - 10):</label>
+          <input type="number" id="calificacion" formControlName="calificacion" min="0" max="10" step="0.1" class="input-control">
+          @if (formularioPelicula.get('calificacion')?.invalid && formularioPelicula.get('calificacion')?.touched) {
+            <span class="error">Inválida.</span>
+          }
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="director">Director:</label>
+        <input type="text" id="director" formControlName="director" class="input-control">
+        @if (formularioPelicula.get('director')?.invalid && formularioPelicula.get('director')?.touched) {
+          <span class="error">El director es obligatorio.</span>
+        }
+      </div>
+
+      <div class="campo">
+        <label for="sinopsis">Sinopsis:</label>
+        <textarea id="sinopsis" formControlName="sinopsis" class="input-control textarea-control"></textarea>
+        @if (formularioPelicula.get('sinopsis')?.invalid && formularioPelicula.get('sinopsis')?.touched) {
+          <span class="error">La sinopsis es obligatoria (mínimo 10 caracteres).</span>
+        }
+      </div>
+
+      <button type="submit" [disabled]="formularioPelicula.invalid" class="btn-submit">Subir Película</button>
+    </form>
+  </div>
+
+  <div class="panel-lista">
+    <h2> Gestionar Catálogo Actual</h2>
+    <div class="lista-admin">
+      @for (pelicula of listaPeliculas$ | async; track pelicula.id) {
+        <div class="item-pelicula">
+          <div class="info-item">
+            <strong>{{ pelicula.titulo }}</strong>
+            <span class="fecha-item">{{ pelicula.fecha_estreno }}</span>
+          </div>
+          <button class="btn-borrar-admin" (click)="borrarPeliculaAdmin(pelicula.id!, pelicula.titulo)">
+            Borrar
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+</div>

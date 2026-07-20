@@ -1,0 +1,74 @@
+.tarjeta-pelicula {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.tarjeta-pelicula:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.titulo {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+.calificacion {
+  background-color: #e50914;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.meta-info {
+  font-size: 0.9rem;
+  color: #aaaaaa;
+  margin-bottom: 1rem;
+}
+
+.sinopsis {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+}
+
+.tarjeta-footer {
+  margin-top: auto;
+}
+
+.btn-comprar {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-comprar:hover {
+  background-color: #b20710;
+}

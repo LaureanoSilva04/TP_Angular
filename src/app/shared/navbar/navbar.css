@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-btn {
+  background-color: transparent;
+  color: #a0a0a0;
+  border: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  color: #fff;
+  background-color: #2a2a2a;
+}
+
+.active {
+  color: #fff;
+  border-bottom: 2px solid #e50914; 
+}
