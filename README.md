@@ -1,59 +1,29 @@
-# CatalogoPeliculas
+# Catálogo de Cine - Trabajo Práctico Final
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.6.
+## Descripción del Proyecto
+Este proyecto es una Single Page Application (SPA) desarrollada como Trabajo Práctico Final para el Seminario de Angular. La temática elegida es un **Catálogo de Cine**. 
 
-## Development server
+La aplicación permite a los usuarios navegar a través de diferentes secciones para descubrir películas. Cuenta con tres rutas principales:
+1. **Estrenos del Mes:** Visualización del catálogo actual de películas filtradas por el mes en curso.
+2. **Próximos Estrenos:** Visualización de las películas que se lanzarán en los próximos meses o años.
+3. **Panel de Administración:** Una sección de gestión que incluye un formulario reactivo para agregar nuevas películas al catálogo (método POST) y la funcionalidad para eliminar registros existentes (método DELETE). 
 
-To start a local development server, run:
+El proyecto consume una API externa simulada mediante MockAPI utilizando `HttpClient` y emplea la programación reactiva (`Observable`, `AsyncPipe`) para mantener la interfaz actualizada de manera eficiente.
 
-```bash
-ng serve
-```
+## Tecnologías y Características Implementadas
+* **Framework:** Angular (Standalone Components)
+* **Control de Flujo:** Sintaxis moderna (`@for`, `@if`)
+* **Formularios:** Reactive Forms con validaciones sincrónicas
+* **Ruteo:** Implementación de Angular Router
+* **Peticiones HTTP:** Consumo asíncrono de API externa (GET, POST, DELETE) con RxJS.
+* **Estilos:** CSS puro.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+* **Nombre y Apellido:** Silva Laureano
+* **DNI:** Esta en el archivo .txt entregado en el moodle
+* **Email:** laureanonicolassilva44@gmail.com
+* **Carrera:** TUDAI (Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas)
+* **Sede:** Las Flores
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
